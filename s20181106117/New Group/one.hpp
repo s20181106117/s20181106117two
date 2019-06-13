@@ -1,13 +1,13 @@
 //
-//  main.cpp
+//  one.hpp
 //  s20181106117
 //
 //  Created by s20181106117 on 2019/6/13.
 //  Copyright © 2019 s20181106117. All rights reserved.
 //
 
-#include <iostream>
-using namespace std;
+#ifndef one_hpp
+#define one_hpp
 class CMyClassA {
     int val;
 public:
@@ -37,7 +37,9 @@ class CMyClassB :public CMyClassA{
         printf("%d\n", val);
     }
 private:
-    int valint main(int argc, char** argv) {
+    int val;
+    
+}; int main(int argc, char** argv) {
     CMyClassA a(3), *ptr;
     CMyClassB b(5);
     ptr = &a;
@@ -47,4 +49,5 @@ private:
     ptr = &b;
     ptr->print();
     return 0;
-    }
+}
+#endif /* one_hpp */
